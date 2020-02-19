@@ -1,0 +1,25 @@
+
+.logo {
+  background: transparent;
+  position: absolute;
+  top: 650px;
+  left: 30px;
+}
+
+.buttonStyle{
+  position: absolute;
+  border: 1px solid white;
+  color: black;
+  top: 790px;
+  left: 120px;
+}
+.buttonStyle2{
+  position: absolute;
+  border: 1px solid white;
+  color: black;
+  top: 790px;
+  left: 230px;
+}
+.btn-secondary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+  background-color: rgb(0, 0, 0);
+}
