@@ -8,13 +8,16 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { MovieCardComponent } from './movie-card/movie-card.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ApiUrlInterceptor } from './services/apiUrl.interceptor';
-
+import { FilmDetailsComponent } from './film-details/film-details.component';
+import { FilmComponent } from './film/film.component';
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     MovieCardComponent,
-    NavbarComponent
+    NavbarComponent,
+    FilmDetailsComponent,
+    FilmComponent
   ],
   imports: [
     BrowserModule,

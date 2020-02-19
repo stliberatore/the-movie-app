@@ -1,3 +1,7 @@
-<H1> dettagli film </H1>
 
-<app-film [filmData] ="filmData"></app-film>
+<div *ngIf="filmDetails">
+
+<app-film [filmDetails]="filmDetails"></app-film>
+
+
+</div>

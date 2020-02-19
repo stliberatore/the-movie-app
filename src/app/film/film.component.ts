@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { FilmDetails} from '../shared/filmDetrails.interface';
+
 
 @Component({
   selector: 'app-film',
@@ -7,8 +9,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class FilmComponent implements OnInit {
 
-  @Input() filmData;
-
+  @Input() filmDetails;
   constructor() { }
 
   ngOnInit() {

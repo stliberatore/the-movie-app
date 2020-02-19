@@ -1,6 +1,31 @@
 <div class="film">
-<div *ngIf="filmData" class="row">
-  <div class="col">
-    <img [src]="filmData.results[0].poster_path" width="350">
-    <p>{{filmData.results[0].overview}}</p>
+  <div *ngIf="filmDetails" class="row">
+    <div class="container">
+      <h1 style="color:white; text-align: center;">
+        {{ filmDetails.title }}
+      </h1>
+      <br />
+      <h2 style="color: white; float: left;">
+        Genere:
+        <h5 *ngFor="let genre of filmDetails.genres">
+          {{ genre.name }}
+        </h5>
+      </h2>
+      <h2 style="color: white; float: right;">
+        Lingue Disponibili:
+        <h5 *ngFor="let spoken_languages of filmDetails.spoken_languages">
+          {{ spoken_languages.name }}
+          <br />
+          <br />
+          <h2>Data di rilascio:</h2>
+          {{ filmDetails.release_date }}
+        </h5>
+      </h2>
+      <img
+        class="center"
+        [src]="'https://image.tmdb.org/t/p/w500' + filmDetails.poster_path"
+        width="350"
+      />
+    </div>
+  </div>
 </div>

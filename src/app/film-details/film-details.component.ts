@@ -1,7 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ApiRequestService } from '../services/api-request.service';
-import { FilmPreview } from '../shared/discover.interface';
+import { FilmResponse, Film } from '../shared/discover.interface';
+import { FilmDetails } from '../shared/filmDetrails.interface';
+
 
 @Component({
   selector: 'app-film-details',
@@ -9,8 +11,9 @@ import { FilmPreview } from '../shared/discover.interface';
   styleUrls: ['./film-details.component.scss']
 })
 export class FilmDetailsComponent implements OnInit {
-  id: any;
-  filmData: any;
+
+  filmDetails: FilmDetails[];
+  id: string;
 
   constructor(private route: ActivatedRoute, private apiRequestService: ApiRequestService) { }
 
@@ -20,8 +23,9 @@ export class FilmDetailsComponent implements OnInit {
   }
 
   showDetail(id: string): void {
-    this.apiRequestService
-      .getDetail(id)
-      .subscribe((data: FilmPreview[]) => this.filmData = data);
+    this.apiRequestService.getDetail(id)
+      .subscribe((data: FilmDetails[]) => this.filmDetails = data);
   }
+
 }
+
