@@ -13,8 +13,6 @@ export class ApiRequestService {
     // tslint:disable-next-line: max-line-length
     'https://api.themoviedb.org/3/discover/movie?language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=';
 
-  private backdropImageUrl = 'https://image.tmdb.org/t/p/w300';
-
   private randomPageIndex = angularMath.getIntegerRandomRange(1, 500);
 
   constructor(private http: HttpClient) {}
