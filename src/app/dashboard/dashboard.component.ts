@@ -26,5 +26,4 @@ export class DashboardComponent implements OnInit {
       .subscribe((res: FilmResponse) => this.film = res.results);
   }
 
-
 }

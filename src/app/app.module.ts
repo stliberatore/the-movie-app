@@ -8,8 +8,12 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { MovieCardComponent } from './movie-card/movie-card.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ApiUrlInterceptor } from './services/apiUrl.interceptor';
+<<<<<<< HEAD
 import { FilmDetailsComponent } from './film-details/film-details.component';
 import { FilmComponent } from './film/film.component';
+=======
+
+>>>>>>> fix service "getFilmPreview", now it retrieves images
 @NgModule({
   declarations: [
     AppComponent,

@@ -9,6 +9,11 @@ import { Film, FilmResponse } from '../shared/discover.interface';
 })
 export class MovieCardComponent implements OnInit {
 
+<<<<<<< HEAD
+=======
+  public baseImageUrl: 'https://image.tmdb.org/t/p/w300';
+
+>>>>>>> fix service "getFilmPreview", now it retrieves images
   @Input() film: Film[];
 
   constructor() { }
