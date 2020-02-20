@@ -17,9 +17,12 @@ export class ApiRequestService {
   private filmDetailUrl = 'https://api.themoviedb.org/3/movie'
 =======
 
+<<<<<<< HEAD
   private backdropImageUrl = 'https://image.tmdb.org/t/p/w300';
 
 >>>>>>> fix service "getFilmPreview", now it retrieves images
+=======
+>>>>>>> fix services and slider bar
   private randomPageIndex = angularMath.getIntegerRandomRange(1, 500);
 
   constructor(private http: HttpClient) { }
