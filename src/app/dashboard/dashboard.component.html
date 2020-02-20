@@ -3,28 +3,27 @@
 <div class="absoluteBackground">
   <div class="firstLineCard">
     <h5 style="text-align: left;">Consigliati</h5>
-    <div class="wrapper">
-      <section id="section1">
-        <a href="#section3">‹</a>
-
-        <img style="width: 100%;" src="../assets/evolution.jpg" />
+    >
+    <div style="position:relative;">
+      <img src="../assets/evolution.jpg" width="100%" height="100%" />
+      <div>
         <img
           class="logo"
-          style="width: 30%;"
-          src="../assets/logo_evolution.png" />
+          src="../assets/logo_evolution.png"
+          width="30%"
+          height="30%"
+        />
 
-        <div class ="buttonStyle">
-          <button type="button" class="btn btn-secondary">
-           Riproduci
-          </button></div>
-          <div class ="buttonStyle2">
-          <button class="buttonStyle" type="button" class="btn btn-secondary">
-            Altre info
-           </button>
+        <div class="container">
+          <div class="row" style="position: absolute; top: 72%;   left: 10%; background: none;" >
+            <div class="col-*-*"><button type="button" class="btn btn-primary">Riproduci</button></div>
+            <div class="col-*-*" style="margin-left: 25px;"><button type="button" class="btn btn-primary">Altre Info</button></div>
+          </div>
+
+
         </div>
-
-        <app-movie-card></app-movie-card>
-      </section>
+      </div>
     </div>
+    <app-movie-card></app-movie-card>
   </div>
 </div>
