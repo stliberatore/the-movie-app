@@ -9,7 +9,7 @@ import { ApiRequestService } from '../services/api-request.service';
 })
 export class DashboardComponent implements OnInit {
 
-  film: Film[];
+  @Input() film: Film[];
 
   constructor(private apiRequestService: ApiRequestService) {}
 

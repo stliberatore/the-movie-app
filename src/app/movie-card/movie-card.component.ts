@@ -9,8 +9,6 @@ import { Film, FilmResponse } from '../shared/discover.interface';
 })
 export class MovieCardComponent implements OnInit {
 
-  public baseImageUrl: 'https://image.tmdb.org/t/p/w300';
-
   @Input() film: Film[];
 
   constructor() { }
