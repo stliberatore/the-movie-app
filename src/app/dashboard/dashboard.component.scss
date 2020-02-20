@@ -1,25 +1,16 @@
-
 .logo {
-  background: transparent;
+  background: none;
+  width: 30%;
   position: absolute;
-  top: 650px;
-  left: 30px;
+
+  max-width: 30%;
+  min-width: 20%;
+  top: 50%;
+  left: 3%;
 }
 
-.buttonStyle{
-  position: absolute;
-  border: 1px solid white;
-  color: black;
-  top: 790px;
-  left: 120px;
-}
-.buttonStyle2{
-  position: absolute;
-  border: 1px solid white;
-  color: black;
-  top: 790px;
-  left: 230px;
-}
-.btn-secondary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
-  background-color: rgb(0, 0, 0);
+button {
+  background-color: #202020;
+  border-radius: 6px;
+  border-color: white;
 }
