@@ -5,9 +5,8 @@ import { FilmDetailsComponent } from './film-details/film-details.component';
 import { FilmComponent } from './film/film.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'dashboard-list', pathMatch: 'full' },
-  { path: 'app-dashboard', component: DashboardComponent },
-  { path: 'app-film', component: FilmComponent },
+  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+  { path: 'dashboard', component: DashboardComponent },
   { path: 'app-film-details/:id', component: FilmDetailsComponent }
 ];
 
