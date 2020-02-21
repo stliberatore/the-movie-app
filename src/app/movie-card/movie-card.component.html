@@ -1,0 +1,20 @@
+<div class="contain">
+
+  <div class="row">
+    <div class="row__inner">
+
+      <div *ngFor="let info of film" class="tile">
+        <div *ngIf="info.backdrop_path && info.title !null" class="tile__media">
+          <img class="tile__img" [src]="'https://image.tmdb.org/t/p/w500' + info.backdrop_path" alt=""  />
+        </div>
+        <div class="tile__details">
+          <div class="tile__title">
+            {{info.title}}
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>

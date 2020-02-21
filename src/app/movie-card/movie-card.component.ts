@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ApiRequestService } from '../services/api-request.service';
-import { FilmPreview } from '../shared/discover.interface';
+import { Film, FilmResponse } from '../shared/discover.interface';
 
 @Component({
   selector: 'app-movie-card',
@@ -8,17 +8,19 @@ import { FilmPreview } from '../shared/discover.interface';
   styleUrls: ['./movie-card.component.scss']
 })
 export class MovieCardComponent implements OnInit {
-  film: FilmPreview;
 
-  constructor(private apiRequestService: ApiRequestService) { }
+
+  public baseImageUrl: 'https://image.tmdb.org/t/p/w300';
+
+
+  @Input() film: Film[];
+
+  constructor() { }
 
   ngOnInit() {
-    this.getFilmPreview();
+
   }
 
-  getFilmPreview(): void {
-    this.apiRequestService
-      .getFilmPreview()
-      .subscribe((res: FilmPreview) => (this.film = res));
-  }
+
+
 }

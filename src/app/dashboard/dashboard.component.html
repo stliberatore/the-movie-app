@@ -1,1 +1,37 @@
 <app-navbar></app-navbar>
+
+<div class="absoluteBackground">
+  <div class="firstLineCard">
+    <h5 style="text-align: left;">Consigliati</h5>
+    <div>
+      <div style="position:relative;">
+        <img src="../assets/evolution.jpg" width="100%" height="100%" />
+        <div>
+          <img
+            class="logo"
+            src="../assets/logo_evolution.png"
+            width="30%"
+            height="30%"
+          />
+
+          <div class="container">
+            <div
+              class="row"
+              style="position: absolute; top: 72%;   left: 10%; background: none;"
+            >
+              <div class="col-*-*" style="margin-left: 25px;">
+                <button type="button" class="btn btn-dark">Riproduci</button>
+              </div>
+              <a href="/app-film-details/475557" style="color: white;">
+                <button type="button" class="btn btn-dark button">
+                  Altre Info
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <app-movie-card [film]="film"></app-movie-card>
+  </div>
+</div>

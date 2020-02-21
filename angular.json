@@ -125,6 +125,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "the-movie-app"
+    }
+  },
+  "defaultProject": "the-movie-app",
+  "cli": {
+    "analytics": false
+  }
 }
