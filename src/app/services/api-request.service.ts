@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
+import { filter, map, tap } from 'rxjs/operators';
 import { Film, FilmResponse } from '../shared/discover.interface';
 import { angularMath } from 'angular-ts-math';
 import { FilmDetails } from '../shared/filmDetrails.interface';
@@ -26,9 +27,11 @@ export class ApiRequestService {
 
   constructor(private http: HttpClient) { }
 
-  getFilmPreview(): Observable<FilmResponse> {
+  getFilmPreview(): Observable<any> {
     return this.http.get<FilmResponse>(`${this.dashboardUrl}${this.randomPageIndex}`
-    );
+    ).pipe(map((res: FilmResponse) => {
+      return res.results.filter(film => film.backdrop_path !== null);
+    }));
   }
   getDetail(id: string): Observable<FilmDetails[]> {
     return this.http.get<FilmDetails[]>(`${this.filmDetailUrl}/${id}`);

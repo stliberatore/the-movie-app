@@ -12,7 +12,8 @@ import { FilmDetails } from '../shared/filmDetrails.interface'
 })
 export class DashboardComponent implements OnInit {
 
-  @Input() film: Film[];
+  film: Film[];
+  yupps: any
   @Input() filmData: FilmResponse;
   @Input() filmDetails;
 
@@ -24,7 +25,7 @@ export class DashboardComponent implements OnInit {
 
   getFilmPreview(): void {
     this.apiRequestService.getFilmPreview()
-      .subscribe((res: FilmResponse) => this.film = res.results);
+      .subscribe((res: Film[]) => this.film = res);
   }
 
 }
