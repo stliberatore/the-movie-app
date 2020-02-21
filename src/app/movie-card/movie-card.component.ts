@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 import { ApiRequestService } from '../services/api-request.service';
 import { Film, FilmResponse } from '../shared/discover.interface';
 
@@ -10,6 +12,7 @@ import { Film, FilmResponse } from '../shared/discover.interface';
 export class MovieCardComponent implements OnInit {
 
   @Input() film: Film[];
+  @Input() filmResponse: FilmResponse[];
 
   constructor() { }
 
