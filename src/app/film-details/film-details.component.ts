@@ -27,5 +27,6 @@ export class FilmDetailsComponent implements OnInit {
       .subscribe((data: FilmDetails[]) => this.filmDetails = data);
   }
 
+
 }
 
