@@ -14,6 +14,7 @@ export class DashboardComponent implements OnInit {
 
   @Input() film: Film[];
   @Input() filmData: FilmResponse;
+  @Input() filmDetails;
 
   constructor(private apiRequestService: ApiRequestService, private route: ActivatedRoute, private router: Router) {}
 
